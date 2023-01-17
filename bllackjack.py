@@ -1,5 +1,7 @@
 import random
-from replit import clear
+import pyfiglet
+app = pyfiglet.figlet_format("Black Jack")
+print(app)
 def deal_card():
   cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
   card = random.choice(cards)
@@ -55,5 +57,4 @@ def play_game():
   print(f"   Computer's final hand: {computer_cards}, final score: {computer_score}")
   print(compare(user_score, computer_score))
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-  clear()
   play_game()
